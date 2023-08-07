@@ -36,9 +36,12 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").solargraph.setup {
-  capabilities = capabilities,
+  capabilities = capabilities
 }
 
 require("lspconfig").pyright.setup {
-  capabilities = capabilities,
+  capabilities = capabilities
+}
+require("lspconfig").intelephense.setup {
+  capabilities = capabilities
 }

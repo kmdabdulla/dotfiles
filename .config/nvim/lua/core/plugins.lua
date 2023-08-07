@@ -12,33 +12,58 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  'wbthomason/packer.nvim',
+
+  -- Colour, themes and icons 
   'ellisonleao/gruvbox.nvim',
-  'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
+
+  -- Greeter screen
+  {
+    'goolord/alpha-nvim',
+    event = "VimEnter",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opt = {require'core.plugin_config.alpha_dashboard'.config}
+  },
+
+  -- Syntax highlighting
   'nvim-treesitter/nvim-treesitter',
+
+  -- Multi line edit
+  'mg979/vim-visual-multi',
+
+  -- Run tests
   'vim-test/vim-test',
+
+  -- Git decorations
   'lewis6991/gitsigns.nvim',
-  'tpope/vim-fugitive',
+
+  -- comment lines
   'tpope/vim-commentary',
 
-  -- rust babyyyyyyy
+  -- Debug plugins 
   'mfussenegger/nvim-dap',
   'rcarriga/nvim-dap-ui',
-  'simrat39/rust-tools.nvim',
 
   -- completion
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
-  'L3MON4D3/LuaSnip',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
   'saadparwaiz1/cmp_luasnip',
+
+  -- Snippet generator
+  'L3MON4D3/LuaSnip',
   "rafamadriz/friendly-snippets",
-  "github/copilot.vim",
+
+  -- LSP 
   "williamboman/mason.nvim",
   "neovim/nvim-lspconfig",
   "williamboman/mason-lspconfig.nvim",
   "glepnir/lspsaga.nvim",
+
+  -- Fuzzy finder
   {
 	  'nvim-telescope/telescope.nvim',
 	  tag = '0.1.0',
