@@ -34,13 +34,13 @@ local plugins = {
     opt = {require'core.plugin_config.alpha_dashboard'.config}
   },
 
-  -- Edit file system in vim buffer
-  {
-  'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
+  -- -- Edit file system in vim buffer
+  -- {
+  -- 'stevearc/oil.nvim',
+  -- opts = {},
+  -- -- Optional dependencies
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- },
 
   -- outlining symbols in a file
   'simrat39/symbols-outline.nvim',
