@@ -18,7 +18,7 @@ local plugins = {
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
   'stevearc/dressing.nvim',
-  'ziontee113/icon-picker.nvim',
+  -- 'ziontee113/icon-picker.nvim',
 
   -- Color highlighter
   'NvChad/nvim-colorizer.lua',
