@@ -19,3 +19,5 @@ require('goto-preview').setup {
   stack_floating_preview_windows = true, -- Whether to nest floating windows
   preview_window_title = { enable = true, position = "left" }, -- Whether to set the preview window title as the filename
 }
+-- shortcuts
+-- gpd for preview and gP for closing the preview
