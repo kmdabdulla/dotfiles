@@ -1,5 +1,5 @@
 vim.cmd [[
-  let test#strategy = "vimux"
+  let test#strategy = 'neovim'
   let test#php#phpunit#executable = 'phpunit'
 ]]
 
