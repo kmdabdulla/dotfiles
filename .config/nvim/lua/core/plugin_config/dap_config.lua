@@ -12,6 +12,27 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
+-- install and configure debug adapters for the language needed
+-- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
+
+dap.adapters.php = {
+  type = "executable",
+  command = "node",
+  args = { os.getenv("HOME") .. "vscode-php-debug/out/phpDebug.js" }
+}
+
+dap.configurations.php = {
+  {
+    type = "php",
+    request = "launch",
+    name = "Listen for Xdebug",
+    port = 9003,
+    pathMappings = {
+      ["/var/www/html"] = "${workspaceFolder}"
+    }
+  }
+}
+
 vim.keymap.set("n", "<Leader>dt", ':DapToggleBreakpoint<CR>')
 vim.keymap.set("n", "<Leader>dx", ':DapTerminate<CR>')
 vim.keymap.set("n", "<Leader>do", ':DapStepOver<CR>')
