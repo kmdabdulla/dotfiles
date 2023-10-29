@@ -20,7 +20,7 @@ vim.opt.autoread = true
 -- Set to use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Set relative number 
+-- Set relative number
 vim.wo.relativenumber = true
 
 -- Tabs and spaces
@@ -34,3 +34,6 @@ vim.cmd [[ set noswapfile ]]
 
 -- Line numbers
 vim.wo.number = true
+
+-- Autoformat
+vim.cmd [[autocmd InsertLeave * lua vim.lsp.buf.format()]]
