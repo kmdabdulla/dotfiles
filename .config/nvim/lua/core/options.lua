@@ -36,4 +36,4 @@ vim.cmd [[ set noswapfile ]]
 vim.wo.number = true
 
 -- Autoformat
-vim.cmd [[autocmd InsertLeave * lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
