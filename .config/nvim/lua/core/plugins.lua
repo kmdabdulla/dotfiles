@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
-  -- Colour, themes and icons 
+  -- Colour, themes and icons
   'ellisonleao/gruvbox.nvim',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
@@ -31,7 +31,7 @@ local plugins = {
     'goolord/alpha-nvim',
     event = "VimEnter",
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opt = {require'core.plugin_config.alpha_dashboard'.config}
+    opt = { require 'core.plugin_config.alpha_dashboard'.config }
   },
 
   -- -- Edit file system in vim buffer
@@ -46,7 +46,7 @@ local plugins = {
   'simrat39/symbols-outline.nvim',
 
   -- indent guides
-  { "lukas-reineke/indent-blankline.nvim" },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- search and replace
   'nvim-pack/nvim-spectre',
@@ -57,7 +57,7 @@ local plugins = {
 
   -- Generate auto-pairs
   {
-  'windwp/nvim-autopairs',
+    'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {}
   },
@@ -71,30 +71,31 @@ local plugins = {
     keys = { '<space>m', '<space>j', '<space>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
-      require('treesj').setup({--[[ your config ]]})
+      require('treesj').setup({ --[[ your config ]] })
     end,
   },
 
   -- Run tests
   'vim-test/vim-test',
 
-  -- Git 
+  -- Git
   'lewis6991/gitsigns.nvim',
   'tpope/vim-fugitive',
   {
-      'kdheepak/lazygit.nvim',
-      dependencies = {
-          'nvim-lua/plenary.nvim',
-        },
+    'kdheepak/lazygit.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
   },
   'f-person/git-blame.nvim',
 
   -- comment lines
   'tpope/vim-commentary',
 
-  -- Debug plugins 
+  -- Debug plugins
   'mfussenegger/nvim-dap',
   'rcarriga/nvim-dap-ui',
+  'theHamsta/nvim-dap-virtual-text',
   {
     'folke/trouble.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -113,7 +114,7 @@ local plugins = {
   'L3MON4D3/LuaSnip',
   'rafamadriz/friendly-snippets',
 
-  -- LSP 
+  -- LSP
   'williamboman/mason.nvim',
   'neovim/nvim-lspconfig',
   'williamboman/mason-lspconfig.nvim',
@@ -122,9 +123,9 @@ local plugins = {
 
   -- Fuzzy finder
   {
-	  'nvim-telescope/telescope.nvim',
-	  tag = '0.1.0',
-	  dependencies = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.4',
+    dependencies = { { 'nvim-lua/plenary.nvim' } }
   },
   -- Telescope file browser
   {
@@ -132,29 +133,29 @@ local plugins = {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
 
-  -- Navigation 
+  -- Navigation
   {
-  'phaazon/hop.nvim',
-  branch = 'v2', -- optional but strongly recommended
-  config = function()
-    -- you can configure Hop the way you like here; see :h hop-config
-    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  end
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
   },
   {
-  'SmiteshP/nvim-navbuddy',
-  dependencies = {
+    'SmiteshP/nvim-navbuddy',
+    dependencies = {
       'SmiteshP/nvim-navic',
       'MunifTanjim/nui.nvim'
     },
-      opts = { lsp = { auto_attach = true } }
+    opts = { lsp = { auto_attach = true } }
   },
   'ggandor/leap.nvim',
   'ggandor/flit.nvim',
 
   -- Launch terminal withing vim buffer
   {
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+    { 'akinsho/toggleterm.nvim', version = "*", config = true }
   },
 
   -- Add/change/delete surrounding delimiter pairs
@@ -163,8 +164,8 @@ local plugins = {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-        require('nvim-surround').setup({
-        })
+      require('nvim-surround').setup({
+      })
     end
   },
 }
