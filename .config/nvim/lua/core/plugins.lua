@@ -18,13 +18,9 @@ local plugins = {
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
     'stevearc/dressing.nvim',
-    -- 'ziontee113/icon-picker.nvim',
 
     -- Color highlighter
     'NvChad/nvim-colorizer.lua',
-
-    -- nvim tree
-    'nvim-tree/nvim-tree.lua',
 
     -- Greeter screen
     {
@@ -34,22 +30,8 @@ local plugins = {
         opt = { require 'core.plugin_config.alpha_dashboard'.config }
     },
 
-    -- -- Edit file system in vim buffer
-    -- {
-    -- 'stevearc/oil.nvim',
-    -- opts = {},
-    -- -- Optional dependencies
-    -- dependencies = { "nvim-tree/nvim-web-devicons" },
-    -- },
-
-    -- outlining symbols in a file
-    'simrat39/symbols-outline.nvim',
-
     -- indent guides
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-
-    -- search and replace
-    'nvim-pack/nvim-spectre',
 
     -- Syntax highlighting
     'nvim-treesitter/nvim-treesitter',
@@ -79,14 +61,6 @@ local plugins = {
     'vim-test/vim-test',
 
     -- Git
-    'lewis6991/gitsigns.nvim',
-    'tpope/vim-fugitive',
-    {
-        'kdheepak/lazygit.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-        },
-    },
     'f-person/git-blame.nvim',
 
     -- comment lines
@@ -96,11 +70,6 @@ local plugins = {
     'mfussenegger/nvim-dap',
     'rcarriga/nvim-dap-ui',
     'theHamsta/nvim-dap-virtual-text',
-    {
-        'folke/trouble.nvim',
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {},
-    },
 
     -- completion
     'hrsh7th/nvim-cmp',
@@ -142,18 +111,10 @@ local plugins = {
             require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     },
-    {
-        'SmiteshP/nvim-navbuddy',
-        dependencies = {
-            'SmiteshP/nvim-navic',
-            'MunifTanjim/nui.nvim'
-        },
-        opts = { lsp = { auto_attach = true } }
-    },
     'ggandor/leap.nvim',
     'ggandor/flit.nvim',
 
-    -- Launch terminal withing vim buffer
+    -- Launch terminal within vim buffer
     {
         { 'akinsho/toggleterm.nvim', version = "*", config = true }
     },
