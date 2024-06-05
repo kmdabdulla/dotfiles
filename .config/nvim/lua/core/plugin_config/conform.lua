@@ -1,0 +1,34 @@
+require("conform").setup({
+	-- Map of filetype to formatters
+	formatters_by_ft = {
+		lua = { "stylua" },
+		go = { "gofumpt" },
+		javascript = { "prettierd" },
+		typescript = { "prettierd" },
+		php = { "phpcbf" },
+		rust = { "rustfmt" },
+		markdown = { "mdformat" },
+		bash = { "shfmt" },
+		json = { "jq" },
+		-- Use the "*" filetype to run formatters on all filetypes.
+		["*"] = { "trim_whitespace", "trim_newlines" },
+		-- Use the "_" filetype to run formatters on filetypes that don't
+		-- have other formatters configured.
+		-- ["_"] = { "trim_whitespace" },
+	},
+	-- If this is set, Conform will run the formatter on save.
+	-- It will pass the table to conform.format().
+	-- This can also be a function that returns the table.
+	format_on_save = function(bufnr)
+		-- Disable with a global or buffer-local variable
+		if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+			return
+		end
+		return { timeout_ms = 500, lsp_fallback = true }
+	end,
+	-- Set the log level. Use `:ConformInfo` to see the location of the log file.
+	log_level = vim.log.levels.ERROR,
+	-- Conform will notify you when a formatter errors
+	notify_on_error = true,
+	-- Custom formatters and overrides for built-in formatters
+})

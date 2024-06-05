@@ -9,24 +9,39 @@ table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
 
 telescope.setup({
-  defaults = {
-    vimgrep_arguments = vimgrep_arguments,
-  },
-  pickers = {
-    find_files = {
-      find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!**/.git/*" },
+    defaults = {
+        vimgrep_arguments = vimgrep_arguments,
     },
-  },
+    pickers = {
+        find_files = {
+            find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!**/.git/*" },
+        },
+    },
+    extensions = {
+        undo = {
+            use_delta = true,
+            use_custom_command = nil, -- setting this implies `use_delta = false`. Accepted format is: { "bash", "-c", "echo '$DIFF' | delta" }
+            side_by_side = false,
+            diff_context_lines = vim.o.scrolloff,
+            entry_format = "state #$ID, $STAT, $TIME",
+            mappings = {
+                i = {
+                    ["<C-cr>"] = require("telescope-undo.actions").yank_additions,
+                    ["<S-cr>"] = require("telescope-undo.actions").yank_deletions,
+                    ["<cr>"] = require("telescope-undo.actions").restore,
+                },
+            },
+        },
+        file_browser = {
+            hidden = { file_browser = true, folder_browser = true },
+            respect_gitignore = false,
+            no_ignore = true,
+        },
+    },
 })
-
-local builtin = require('telescope.builtin')
-
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<Space><Space>', builtin.oldfiles, {})
-vim.keymap.set('n', '<Space>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<Space>g', builtin.grep_string, {})
-vim.keymap.set('n', '<Space>fh', builtin.help_tags, {})
-
+require("telescope").load_extension("undo")
+require("telescope").load_extension("neoclip")
+require("telescope").load_extension "file_browser"
 -- shortcuts
 -- ctrl x to open a file in horizontal split
 -- ctrl v to open a file in vertical split
