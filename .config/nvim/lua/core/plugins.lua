@@ -219,6 +219,7 @@ local plugins = {
 
 	-- Debug plugins
 	"mfussenegger/nvim-dap",
+	"jay-babu/mason-nvim-dap.nvim",
 
 	-- completion
 	"hrsh7th/nvim-cmp",
