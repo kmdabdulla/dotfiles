@@ -1,4 +1,7 @@
 require("neotest").setup({
+	discovery = {
+		enabled = true,
+	},
 	adapters = {
 		require("neotest-phpunit")({
 			phpunit_cmd = function()
@@ -10,9 +13,10 @@ require("neotest").setup({
 			dap = nil, -- to configure `dap` strategy put single element from `dap.configurations.php`
 		}),
 		require("neotest-jest")({
-			jestCommand = "npm test --",
+			jestCommand = "jest --coverage",
 			jestConfigFile = "custom.jest.config.ts",
-			env = { CI = true },
+			jest_test_discovery = true,
+			env = {},
 			cwd = function()
 				return vim.fn.getcwd()
 			end,
