@@ -36,9 +36,10 @@ vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 vim.keymap.set("n", "<leader>t", '<cmd>lua require("neotest").run.run()<CR>')
 vim.keymap.set("n", "<leader>tf", '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<CR>')
 vim.keymap.set("n", "<leader>dt", '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>')
-vim.keymap.set("n", "<leader>ot", '<cmd>lua require("neotest").output.open()<CR>')
-vim.keymap.set("n", "<leader>oe", '<cmd>lua require("neotest").output.open({enter = true})<CR>')
+vim.keymap.set("n", "<leader>ot", '<cmd>lua require("neotest").output.open({enter = true})<CR>')
 vim.keymap.set("n", "<leader>ts", '<cmd>lua require("neotest").summary.toggle()<CR>')
+vim.keymap.set("n", "<leader>pt", '<cmd>lua require("neotest").jump.prev({status = "failed"})<CR>')
+vim.keymap.set("n", "<leader>nt", '<cmd>lua require("neotest").jump.next({status = "failed"})<CR>')
 
 -- telescope keymaps
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
