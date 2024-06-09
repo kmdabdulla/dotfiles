@@ -1,6 +1,6 @@
 require("neotest").setup({
 	discovery = {
-		enabled = true,
+		enabled = false,
 	},
 	adapters = {
 		require("neotest-phpunit")({
@@ -13,7 +13,7 @@ require("neotest").setup({
 			dap = nil, -- to configure `dap` strategy put single element from `dap.configurations.php`
 		}),
 		require("neotest-jest")({
-			jestCommand = "jest --coverage",
+			jestCommand = "npm test --",
 			jestConfigFile = "custom.jest.config.ts",
 			jest_test_discovery = true,
 			env = {},
