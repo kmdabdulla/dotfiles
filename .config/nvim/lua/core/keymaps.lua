@@ -33,9 +33,9 @@ vim.keymap.set("n", "zR", require("ufo").openAllFolds)
 vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 
 -- vim-test keymaps
-vim.keymap.set("n", "<leader>t", "<cmd> lua require('neotest').run.run() <cr>")
-vim.keymap.set("n", "<leader>T", "<cmd> lua require('neotest').run.run(vim.fn.expand('%')) <cr>")
-vim.keymap.set('n', "<leader>dt","<cmd> lua require('neotest').run.run({strategy = 'dap'}) <cr>")
+vim.keymap.set("n", "<leader>t", '<cmd>lua require("neotest").run.run()<CR>')
+vim.keymap.set("n", "<leader>T", '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<CR>')
+vim.keymap.set("n", "<leader>dt", '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>')
 
 -- telescope keymaps
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
