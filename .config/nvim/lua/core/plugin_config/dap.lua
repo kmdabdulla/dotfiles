@@ -14,28 +14,21 @@ dap.listeners.before.event_exited.dapui_config = function()
 	dapui.close()
 end
 
-require("mason-nvim-dap").setup({
-	ensure_installed = { "php", "js" },
-	handlers = {
-		function(config)
-			require("mason-nvim-dap").default_setup(config)
-		end,
-		php = function(config)
-			config.adapters = {
-				type = "executable",
-				command = "node",
-				args = { os.getenv("HOME") .. "/vscode-php-debug/out/phpDebug.js" },
-			}
-			config.configurations = {
-				type = "php",
-				request = "launch",
-				name = "Listen for XDebug",
-				port = 9003,
-				-- pathMappings = {
-				-- 	["/var/www/html"] = "${workspaceFolder}",
-				-- },
-			}
-			require("mason-nvim-dap").default_setup(config) -- don't forget this!
-		end,
+dap.adapters.php = {
+	type = "executable",
+	command = "node",
+	args = { os.getenv("HOME") .. "/.local/share/nvim/mason/packages/php-debug-adapter/extension/out/phpDebug.js" },
+}
+
+dap.configurations.php = {
+	{
+		type = "php",
+		request = "launch",
+		name = "Listen for Xdebug",
+		port = 9003,
+		-- Uncomment the following lines to enable Xdebug for docker
+		-- pathMappings = {
+		-- 	["/var/www/html"] = "${workspaceFolder}",
+		-- },
 	},
-})
+}

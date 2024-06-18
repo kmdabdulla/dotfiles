@@ -237,7 +237,6 @@ local plugins = {
 		},
 	},
 	"theHamsta/nvim-dap-virtual-text",
-	"jay-babu/mason-nvim-dap.nvim",
 
 	-- completion
 	"hrsh7th/nvim-cmp",
