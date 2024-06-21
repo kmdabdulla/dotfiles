@@ -21,14 +21,31 @@ dap.adapters.php = {
 }
 
 dap.configurations.php = {
+	-- to run php right from the editor
+	{
+		name = "run current script",
+		type = "php",
+		request = "launch",
+		port = 9003,
+		cwd = "${fileDirname}",
+		program = "${file}",
+		runtimeExecutable = "php",
+	},
+	-- to listen to any php call
+	{
+		name = "listen for Xdebug local",
+		type = "php",
+		request = "launch",
+		port = 9003,
+	},
+	-- to listen to php call in docker container
 	{
 		type = "php",
 		request = "launch",
-		name = "Listen for Xdebug",
+		name = "Listen for Xdebug from container",
 		port = 9003,
-		-- Uncomment the following lines to enable Xdebug for docker
-		-- pathMappings = {
-		-- 	["/var/www/html"] = "${workspaceFolder}",
-		-- },
+		pathMappings = {
+			["/var/www/html"] = "${workspaceFolder}",
+		},
 	},
 }
