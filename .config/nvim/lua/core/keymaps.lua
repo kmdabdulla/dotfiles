@@ -154,6 +154,9 @@ vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search(
 	desc = "Search on current file",
 })
 
+-- Replace word under cursor across the file
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- Close floats, and clear highlights with <Esc>
 vim.keymap.set("n", "<esc>", function()
 	for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -163,7 +166,7 @@ vim.keymap.set("n", "<esc>", function()
 	end
 end)
 
--- inc-rename
+-- inc-rename using lsp
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
 -- oil keymap
@@ -207,10 +210,10 @@ end)
 vim.keymap.set("n", "<leader>4", function()
 	harpoon:list():select(4)
 end)
-vim.keymap.set("n", "hk", function()
+vim.keymap.set("n", "hj", function()
 	harpoon:list():prev()
 end)
-vim.keymap.set("n", "hj", function()
+vim.keymap.set("n", "hk", function()
 	harpoon:list():next()
 end)
 vim.keymap.set("n", "ha", function()
@@ -246,3 +249,9 @@ vim.keymap.set("n", "<F3>", dap.step_over)
 vim.keymap.set("n", "<F4>", dap.step_out)
 vim.keymap.set("n", "<F5>", dap.step_back)
 vim.keymap.set("n", "<F12>", dap.restart)
+
+--LSPSaga Keymaps
+vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+vim.keymap.set("n", "hd", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+vim.keymap.set("n", "<leader>sr", "<cmd>Lspsaga rename<CR>", { silent = true })
