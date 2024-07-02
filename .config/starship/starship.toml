@@ -1,0 +1,41 @@
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$character"""
+
+[directory]
+style = "#d8a657"
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
+
+[character]
+success_symbol = "[](#d8a657)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](#a9b665)"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "#e78a4e"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "#e78a4e"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "#d8a657"
