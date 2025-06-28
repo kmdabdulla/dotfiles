@@ -260,7 +260,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
 	"glepnir/lspsaga.nvim",
-	"rmagatti/goto-preview",
+	{ "rmagatti/goto-preview", dependencies = { "rmagatti/logger.nvim" } },
 	"onsails/lspkind.nvim",
 
 	-- formatter
