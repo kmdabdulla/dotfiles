@@ -1,0 +1,19 @@
+
+[Default Applications]
+text/html=google-chrome.desktop
+application/pdf=org.pwmt.zathura.desktop
+image/jpeg=viewnior.desktop
+image/png=viewnior.desktop
+image/gif=viewnior.desktop
+image/webp=viewnior.desktop
+image/svg+xml=viewnior.desktop
+image/tiff=viewnior.desktop
+image/bmp=viewnior.desktop
+image/x-icon=viewnior.desktop
+image/heic=viewnior.desktop
+image/heif=viewnior.desktop
+text/plain=nvim.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop

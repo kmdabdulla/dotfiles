@@ -1,0 +1,220 @@
+https://stackoverflow.com/questions/25212911/how-to-turn-off-caching-when-testing-elastic-search Cache turn-off
+https://blog.codecentric.de/en/2014/05/elasticsearch-indexing-performance-cheatsheet/ Performance cheatsheet
+https://www.elastic.co/guide/en/elasticsearch/reference/master/tune-for-indexing-speed.html Tune for indexing speed
+https://www.oreilly.com/ideas/10-elasticsearch-metrics-to-watch Elasticsearch metrics to watch
+https://qbox.io/blog/memory-considerations-in-elasticsearch-deployment Memory considerations
+https://www.elastic.co/blog/found-elasticsearch-from-the-bottom-up Elasticsearch from bottom-up
+https://www.elastic.co/blog/a-heap-of-trouble Managing Elasticsearch heap
+https://www.elastic.co/blog/lost-in-translation-boolean-operations-and-filters-in-the-bool-query Boolean queries
+https://qbox.io/blog/optimizing-elasticsearch-how-many-shards-per-index#:~:text=shard%20%E2%80%93%20Because%20Elasticsearch%20is%20a,not%20worry%20about%20the%20details. How many shards
+https://discuss.elastic.co/t/monitoring-elasticsearch-performance/33895/2 Monitor Elasticsearch performance
+https://medium.com/naukri-engineering/garbage-collection-in-elasticsearch-and-the-g1gc-16b79a447181 garbage collection
+https://kb.objectrocket.com/elasticsearch/when-to-use-the-keyword-type-vs-text-datatype-in-elasticsearch When to use the keyword type vs text datatype in Elasticsearch | ObjectRocket
+https://stackoverflow.com/questions/18235996/how-to-not-analyze-in-elasticsearch token - How to not-analyze in ElasticSearch? - Stack Overflow
+https://qbox.io/blog/troubleshooting-in-elasticsearch Troubleshooting in Elasticsearch: Queries, Mappings, and Scoring
+https://stackoverflow.com/questions/28768277/elasticsearch-difference-between-must-and-should-bool-query Elasticsearch difference between MUST and SHOULD bool query - Stack Overflow
+https://discuss.elastic.co/t/what-is-segments-terms-memory-in-bytes/68621 What is segments.terms_memory_in_bytes? - Elasticsearch - Discuss the Elastic Stack
+https://stackoverflow.com/questions/45228877/why-does-lucene-use-arrays-instead-of-hash-tables-for-its-inverted-index indexing - Why does Lucene use arrays instead of hash tables for its inverted index? - Stack Overflow
+https://stackoverflow.com/questions/57632892/how-to-get-elasticsearch-to-return-more-than-10000-results-at-a-time-es-appears How to get elasticsearch to return more than 10000 results at a time? ES appears to not be honoring the index.max_result_window setting - Stack Overflow
+https://discuss.elastic.co/t/total-store-size-in-bytes-measures-what/15253/6 Total.store.size_in_bytes measures what? - Elasticsearch - Discuss the Elastic Stack
+https://discuss.elastic.co/t/store-size-of-an-index/115818 Store.size of an index - Elasticsearch - Discuss the Elastic Stack
+https://www.datadoghq.com/blog/monitor-elasticsearch-performance-metrics/#indexing-performance-metrics How to monitor Elasticsearch performance | Datadog
+https://docs.oracle.com/cd/E19900-01/819-4742/abeik/index.html Heap Tuning Parameters (Sun Java System Application Server Enterprise Edition 8.2 Performance Tuning Guide)
+https://github.com/elastic/elasticsearch/issues/17159 Avoid the fetch phase when retrieving only _id · Issue #17159 · elastic/elasticsearch · GitHub
+https://dzone.com/articles/garbage-collection-settings-for-elasticsearch-mast Garbage Collection Settings for Elasticsearch Master Nodes - DZone Performance
+https://www.oracle.com/technical-resources/articles/java/g1gc.html Garbage First Garbage Collector Tuning
+https://sematext.com/blog/solr-vs-elasticsearch-differences/#toc-top-solr-vs-elasticsearch-differences-19 Solr vs Elasticsearch: Performance Differences & More [2022] - Sematext
+https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/ Negotiation
+https://medium.com/@scarletinked/are-you-the-leader-were-looking-for-interviewing-at-amazon-8301d787815d Amazon Leadership principles
+https://hiring.cafe/ HiringCafe: Find Remote Jobs in Tech - Engineering, Design, Product, Sales, Marketing, and more.
+https://softwareengineering.stackexchange.com/questions/61376/aggregation-vs-composition Aggregation vs Composition
+https://zach-gollwitzer.medium.com/imperative-vs-declarative-programming-procedural-functional-and-oop-b03a53ba745c Imperative vs Declarative
+https://github.com/braydie/HowToBeAProgrammer/tree/master/en How to be a programmer
+https://sites.google.com/site/steveyegge2/being-the-averagest Being the averagest
+https://steve-yegge.blogspot.com/search?q=interview Why Google?
+https://learnxinyminutes.com/ Learn x in y mins
+https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#authors A template to make good README.md
+https://github.com/careercup/CtCI-6th-Edition-php CTCI PHP 
+https://www.bigocheatsheet.com/ Big-O cheatsheet
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed 14 patterns
+https://github.com/mirahman/PHP-Data-Structure-and-Algorithms PHP DSA
+https://frontendmasters.com/courses/algorithms/ Algorithms & Data Structures | Learn Algorithms with TypeScript for Interviews | Frontend Masters
+https://www.techinterviewhandbook.org/grind75?hours=40&weeks=26 Grind 75 - A better Blind 75 you can customize, by the author of Blind 75
+https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions Blind 75 LeetCode Questions - LeetCode Discuss
+https://gist.github.com/vasanthk/485d1c25737e8e72759f System Design cheatsheet
+https://github.com/donnemartin/system-design-primer System Design Primer
+https://www.youtube.com/playlist?list=PLhgw50vUymycJPN6ZbGTpVKAJ0cL4OEH3 System Design prep
+https://leetcode.com/discuss/career/229177/my-system-design-template My System Design Template - LeetCode Discuss
+https://github.com/mxssl/sre-interview-prep-guide SRE interview guide
+https://github.com/trimstray/test-your-sysadmin-skills Sysadmin skills
+https://syedali.net/engineer-interview-questions/ SRE questions
+https://dev.to/logan/questions-i-ask-in-sre-interviews-a9j Questions in SRE interview
+https://github.com/dastergon/awesome-sre SRE curated resources
+https://blog.balthazar-rouberol.com/preparing-the-sre-interview Preparing the SRE interview
+https://www.usenix.org/conference/srecon15/program/presentation/limoncelli Adopting SRE principles in companies other than unicorns 
+https://blog.alicegoldfuss.com/how-to-get-into-sre/ How to get into SRE
+https://www.opsschool.org/introduction.html Ops school
+https://fabrizio2210.medium.com/how-i-get-a-job-at-google-as-sre-83d44aef7859 Fabrizio SRE post
+https://www.gremlin.com/site-reliability-engineering/how-to-become-a-top-notch-sre/ Become a top notch SRE
+https://www.gremlin.com/site-reliability-engineering/sre-interview-questions-and-job-descriptions/ SRE interview qns
+https://github.com/dastergon/awesome-chaos-engineering Chaos Engineering
+https://landing.google.com/sre/ Google - Site Reliability Engineering
+https://snafucatchers.github.io/ Tech reviewed postmoterms 
+https://github.com/danluu/post-mortems GitHub - danluu/post-mortems: A collection of postmortems. Sorry for the delay in merging PRs!
+https://danrl.com/srm/ My Path to Site Reliability Management
+https://phptherightway.com/ PHP - The right way
+https://stackoverflow.com/questions/43040685/how-can-i-change-php-cli-version-on-ubuntu-14-04/49725126 linux - How can I change php-cli version on Ubuntu 14.04? - Stack Overflow
+https://phpenthusiast.com/blog/the-singleton-design-pattern-in-php The singleton pattern in PHP | PHPenthusiast
+https://refactoring.guru/design-patterns/facade/php/example#example-1 Design Patterns: Facade in PHP
+https://stackoverflow.com/questions/33052195/what-are-the-differences-between-composer-update-and-composer-install php - What are the differences between composer update and composer install? - Stack Overflow
+https://www.cleverism.com/102-behavioral-interview-questions-including-answers/ Interview questions
+https://github.com/viraptor/reverse-interview/blob/master/README.md Reverse Interview
+https://www.glassdoor.com/blog/common-interview-questions/ 50 Most Common Interview Questions - Glassdoor Blog
+https://infinitbility.com/laravel-clear-cache-config-view-and-routes Laravel cache clear
+https://justlaravel.com/how-to-implement-datatables-laravel/ Datatables in Laravel
+https://justlaravel.com/ajax-crud-operations-laravel/ CRUD operations in Laravel
+https://medium.com/@kevincristella/basic-token-based-api-authentication-with-laravel-aeed0050dd0d Token auth
+https://medium.com/@remi_collin/keeping-your-laravel-applications-dry-with-single-action-classes-6a950ec54d1d Single Action classes
+https://www.twilio.com/blog/unit-testing-laravel-api-phpunit Unit tests in laravel
+https://pchojecki.medium.com/5-productivity-books-you-should-read-in-2020-b324667c8208 Books Medium post
+https://www.reddit.com/r/productivity/comments/9yrjk6/any_must_read_books_out_there_on_productivity/ Reddit recommendations
+https://wizardzines.com/ Wizard Zines
+https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/ Comparing SOAP vs REST vs GraphQL vs RPC API | AltexSoft
+https://danielmiessler.com/study/difference-between-uri-url/ The Difference Between a URL, URI, and a URN - Daniel Miessler
+https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898 The S.O.L.I.D Principles in Pictures | by Ugonna Thelma | Backticks & Tildes | Medium
+https://medium.com/geekculture/introduction-to-design-patterns-understanding-singleton-design-pattern-5a4d49960444 Introduction to Design Patterns & Understanding Singleton Design Pattern | by Nisal Pubudu | Geek Culture | Medium
+https://levelup.gitconnected.com/mysql-database-index-concepts-you-probably-dont-fully-understand-1a084573904e MySQL Database Index Concepts You Probably Don’t Fully Understand | by Jerry An | Level Up Coding
+https://betterprogramming.pub/how-database-indexing-actually-works-ba6e19e75169 How Database Indexing Actually Works | by Dmytro Khmelenko | Better Programming
+https://medium.com/free-code-camp/database-indexing-at-a-glance-bb50809d48bd An in-depth look at Database Indexing | by Kousik Nath | We’ve moved to freeCodeCamp.org/news | Medium
+https://medium.com/techmonks/redis-vs-memcached-which-one-to-pick-401b0c3cbf94 Redis vs Memcached — Which one to pick? | by Anji… | TechMonks | Medium
+https://medium.com/@SkyscannerEng/scaling-memcached-cdef01e150a1 Scaling Memcached. By Simon Fry | by Skyscanner Engineering | Medium
+https://medium.com/slalom-build/managing-technical-debt-8594f03f1099 Managing Technical Debt. An exploration of techniques for making… | by Jeff Knecht | Slalom Build | Medium
+https://jvns.ca/ Julia Evans
+https://www.husseinnasser.com/p/about-hussein.html Hussein Nasser: About
+https://www.reddit.com/r/personalfinance/wiki/identity_theft/ Identity Theft
+https://stackoverflow.com/questions/885937/what-is-the-difference-between-association-aggregation-and-composition oop - What is the difference between association, aggregation and composition? - Stack Overflow
+https://ca1lib.org/ Electronic library. Download books free. Finding books
+https://stackoverflow.com/questions/7662/database-table-and-column-naming-conventions Database naming conventions
+https://www.designcise.com/web/tutorial/whats-the-best-way-to-store-an-ip-address-in-mysql What's The Best Way To Store An IP Address In MySQL? - Designcise.com
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql How To Create a New User and Grant Permissions in MySQL | DigitalOcean
+https://stackoverflow.com/questions/5888451/problem-with-limit-and-offset-in-sql database - problem with limit and offset in sql? - Stack Overflow
+https://www.geeksforgeeks.org/difference-between-join-and-union-in-sql/#:~:text=UNION%20in%20SQL%20is%20used,results%20into%20new%20distinct%20rows.&text=JOIN%20combines%20data%20from%20many,a%20matched%20condition%20between%20them. Difference between JOIN and UNION in SQL - GeeksforGeeks
+https://medium.com/analytics-vidhya/all-about-sql-joins-492dfa7f8a5e All About SQL Joins. I was recently asked in an interview to… | by Amy Resnik | Analytics Vidhya | Medium
+https://medium.com/ub-women-data-scholars/sql-joins-guide-for-beginners-95f561653284 SQL Joins : Beginner’s Ride in SQL Universe | by Sayali Chavan | Women Data Greenhorns | Medium
+https://stackoverflow.com/questions/28174376/mysql-unique-index-vs-index-speed performance - MySql unique index vs. index speed - Stack Overflow
+https://stackoverflow.com/questions/2578194/what-are-ddl-and-dml sql - What are DDL and DML? - Stack Overflow
+https://medium.com/@satakshi1710/why-should-we-use-explain-command-cb083f5dac01 Why should we use explain command? | by Satakshi Pandey | Medium
+https://medium.com/@sarthak221995/mysql-views-fe698e298bcf MYSQL: Views. This content is my notes from MYSQL… | by Sarthak Dargan | Medium
+https://medium.com/swlh/how-to-create-a-mysql-view-c58d692d099a How to create a MySQL view. In this tutorial I am going to teach… | by Soon Sam Santos | The Startup | Medium
+https://medium.com/@charithra/database-trigger-guards-at-a-ticking-point-c2d7e229564#:~:text=A%20trigger%20contains%20SQL%20statements,special%20kind%20of%20stored%20procedure. Database Trigger : Guards at a ticking point.. | by Charithra Kariyawasam | Medium
+https://hevodata.com/learn/myisam-vs-innodb/ MyISAM vs InnoDB: 7 Critical Differences
+https://app.planetscale.com/kmohamedabdulla/scheduler/backups Backups
+https://github.com/Spomky-Labs/jose Spomky-Labs/jose: JSON Object Signing and Encryption Framework (JWT, JWS, JWE, JWA, JWK, JWKSet and more)
+https://web-token.spomky-labs.com/introduction/contributing Contributing - JWT Framework
+https://web-token.spomky-labs.com/the-easy-way/easy The "Easy" Way - JWT Framework
+https://github.com/RobDWaller/ReallySimpleJWT RobDWaller/ReallySimpleJWT: A really simple library to generate JSON Web Tokens in PHP.
+https://github.com/sop/jwx sop/jwx: A PHP library for JSON web tokens (JWT) with signature (JWS) and encryption (JWE) support.
+https://dev.to/robdwaller/how-to-create-a-json-web-token-using-php-3gml How to Create a JSON Web Token Using PHP - DEV Community 👩‍💻👨‍💻
+https://github.com/web-token/jwt-framework web-token/jwt-framework: JWT Framework
+http://searchstorage.techtarget.com/resources Search Storage
+http://www.infostor.com/ Info Storage
+http://www.storagereview.com/ Storage Reviews
+https://www.codinginterview.com/interview-roadmap Interview roadmap
+https://github.com/jwasham/coding-interview-university#why-use-it Coding interview university
+https://medium.com/educative/3-month-coding-interview-bootcamp-904422926ce8 3-month roadmap
+https://www.educative.io/blog/google-coding-interview Google coding interviews
+https://www.freecodecamp.org/news/why-i-studied-full-time-for-8-months-for-a-google-interview-cc662ce9bb13/ Google interview prep 8 months
+https://medium.com/swlh/how-to-study-for-data-structures-and-algorithms-interviews-at-faang-65043e00b5df How to study DS and Algo
+https://www.reddit.com/r/cscareerquestions/comments/aqbf6a/tip_for_those_struggling_with_leetcode_try/ Leetcode tips
+https://leetcode.com/discuss/general-discussion/390646/I-Leetcoded-(And-So-Can-You!)/353093 Leetcode discuss
+https://interviewing.io/recordings Watch technical mock interviews with engineers from Google, LinkedIn, and more | anonymous technical interview practice | interviewing.io
+https://www.techinterviewhandbook.org/coding-interview-study-plan/ Coding interview study plan - what to study and practice based on time left | Tech Interview Handbook
+https://blog.teclado.com/30-days-of-python/ 30 Days Of Python
+https://medium.com/@annamedyukh/the-only-git-cheat-sheet-you-need-9dce3ccc4036 The Only Git Cheat Sheet You Need | by Anna Med | Medium
+https://ais.usvisa-info.com/en-ca/niv/users/sign_in Sign in or Create an Account | Official U.S. Department of State Visa Appointment Service | Canada | English
+https://www.guru99.com/file-permissions.html File Permissions in Linux / Unix: How to Read, Write & Change?
+https://www.shellscript.sh/variables1.html Understanding Shell Script Variables
+https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55 Linux Performance Analysis in 60,000 Milliseconds | by Netflix Technology Blog | Netflix TechBlog
+https://www.reddit.com/r/unixporn/comments/phz32f/leftwm_attention_the_following_rice_might_be_a/ [leftwm] Attention, the following rice might be a bit Rusty : unixporn
+https://www.reddit.com/r/unixporn/comments/sanwny/bspwm_jotaro_rice_gruvbox/ [bspwm] Jotaro rice (gruvbox) : unixporn
+https://github.com/nvim-lua/kickstart.nvim nvim-lua/kickstart.nvim: A launch point for your personal nvim configuration
+https://github.com/cpow/cpow-dotfiles GitHub - cpow/cpow-dotfiles
+https://vim.rtorr.com/ Vim Cheat Sheet
+https://github.com/NvChad/NvChad NvChad/NvChad: Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.
+https://manytools.org/hacker-tools/ascii-banner/ Create ASCII text banners online
+https://github.com/elentok/format-on-save.nvim elentok/format-on-save.nvim: Automatically formats files when saving using either LSP or shell utilities like prettierd or shfmt
+https://github.com/mhartington/formatter.nvim mhartington/formatter.nvim
+https://gitlab.com/theepic-dev/ansible-epic-dev/-/blob/main/roles/vimmer/templates/lsp.lua?ref_type=heads roles/vimmer/templates/lsp.lua · main · theepic-dev / ansible-epic-dev · GitLab
+https://github.com/exosyphon/nvim/blob/main/lua/plugins.lua nvim/lua/plugins.lua at main · exosyphon/nvim · GitHub
+https://github.com/dmmulroy/kickstart.nix/tree/main/config/nvim/lua/user kickstart.nix/config/nvim/lua/user at main · dmmulroy/kickstart.nix · GitHub
+https://github.com/ThePrimeagen/init.lua/tree/249f3b14cc517202c80c6babd0f9ec548351ec71/lua/theprimeagen init.lua/lua/theprimeagen at 249f3b14cc517202c80c6babd0f9ec548351ec71 · ThePrimeagen/init.lua · GitHub
+https://github.com/comfysage/evergarden?tab=readme-ov-file GitHub - comfysage/evergarden: :rose: a comfy neovim colorscheme for cozy morning coding.
+https://github.com/xero/dotfiles/tree/main/neovim/.config/nvim dotfiles/neovim/.config/nvim at main · xero/dotfiles · GitHub
+https://github.com/jdhao/nvim-config GitHub - jdhao/nvim-config: A modern Neovim configuration with full battery for Python, Lua, C++, Markdown, LaTeX, and more...
+https://github.com/craftzdog/dotfiles-public/tree/master GitHub - craftzdog/dotfiles-public: My personal dotfiles
+https://github.com/xero/miasma.nvim?tab=readme-ov-file GitHub - xero/miasma.nvim: a fog descends upon your editor ☁ dark color scheme inspired by the woods for vim and neovim
+https://github.com/monaqa/dial.nvim?tab=readme-ov-file GitHub - monaqa/dial.nvim: enhanced increment/decrement plugin for Neovim.
+https://github.com/rockerBOO/awesome-neovim GitHub - rockerBOO/awesome-neovim: Collections of awesome neovim plugins.
+https://theosteiner.de/debugging-javascript-frameworks-in-neovim Debugging JavaScript Frameworks in Neovim
+https://vimcolorschemes.com/ Trending vim color schemes | vimcolorschemes
+https://github.com/Gogh-Co/Gogh GitHub - Gogh-Co/Gogh: Gogh is a collection of color schemes for various terminal emulators, including Gnome Terminal, Pantheon Terminal, Tilix, and XFCE4 Terminal also compatible with iTerm on macOS.
+https://github.com/ryanoasis/nerd-fonts ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more
+https://github.com/sainnhe/gruvbox-material GitHub - sainnhe/gruvbox-material: Gruvbox with Material Palette
+https://github.com/savar95x/st/tree/main/colorschemes st/colorschemes at main · savar95x/st · GitHub
+https://github.com/Rizen54/rice/tree/main/gruvbox/alacritty/themes/themes rice/gruvbox/alacritty/themes/themes at main · Rizen54/rice · GitHub
+https://www.wallrice.xyz/ WallRice
+https://github.com/habamax/vim-gruvbit habamax/vim-gruvbit: Refined gruvbox vim colorscheme
+https://github.com/kolunmi/ttyscheme kolunmi/ttyscheme: Collection of Color Schemes for the TTY
+https://github.com/morhetz/gruvbox morhetz/gruvbox: Retro groove color scheme for Vim
+https://github.com/fang2hou/starship-gruvbox-rainbow/blob/main/starship.toml starship-gruvbox-rainbow/starship.toml at main · fang2hou/starship-gruvbox-rainbow
+https://github.com/aharoJ/starship-config/blob/main/starship.toml starship-config/starship.toml at main · aharoJ/starship-config
+https://starship.rs/config/ Configuration | Starship
+https://github.com/hyprland-community/awesome-hyprland hyprland-community/awesome-hyprland: Awesome list for Hyprland [maintainer=@yavko]
+https://github.com/LilAiluropoda/hyprland-gruvbox-theme/tree/main/hypr hyprland-gruvbox-theme/hypr at main · LilAiluropoda/hyprland-gruvbox-theme
+https://github.com/mxkrsv/dotfiles-old/tree/master/.config/waybar dotfiles-old/.config/waybar at master · mxkrsv/dotfiles-old
+https://github.com/elifouts/Dotfiles/tree/main/.config/waybar Dotfiles/.config/waybar at main · elifouts/Dotfiles
+https://github.com/abxh/dotfiles/tree/main/rofi dotfiles/rofi at main · abxh/dotfiles
+https://github.com/SylEleuth/gruvbox-plus-icon-pack SylEleuth/gruvbox-plus-icon-pack: Gruvbox Plus icon pack for Linux desktops based on Gruvbox color theme.
+https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme Fausto-Korpsvart/Gruvbox-GTK-Theme: A GTK theme based on the Gruvbox colour palette.
+https://addons.mozilla.org/en-US/firefox/addon/gruvbox-medium-dark/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search Gruvbox Dark – Get this Theme for 🦊 Firefox (en-US)
+https://github.com/0bCdian/Hyprland_dotfiles/tree/gruvboxy/zathura Hyprland_dotfiles/zathura at gruvboxy · 0bCdian/Hyprland_dotfiles
+https://github.com/vanRooijen/dot_files vanRooijen/dot_files: Raymond's Dot Files - Gnome, Ubuntu
+https://github.com/RoccoRakete/hyprland-dots?tab=readme-ov-file RoccoRakete/hyprland-dots
+https://www.reddit.com/r/unixporn/comments/1gl02xq/i3wm_gruvbox_my_own_terminal_utilities/ [i3wm] Gruvbox. My own terminal utilities. : r/unixporn
+https://github.com/Rizen54/rice Rizen54/rice: All of my dotfiles, wallpapers etc with some tips. (Arch nord themed rice with i3wm)
+https://www.reddit.com/r/unixporn/comments/15sh6yw/dwm_dream_of_the_endless/ [dwm] Dream of the Endless : r/unixporn
+https://github.com/savar95x/dotfiles savar95x/dotfiles: configuration files for my daily driver
+https://github.com/0bCdian/Hyprland_dotfiles/tree/gruvboxy 0bCdian/Hyprland_dotfiles at gruvboxy
+https://github.com/0bCdian/Hyprland_dotfiles 0bCdian/Hyprland_dotfiles: Here I will put all of my ricing files in hyprland
+https://www.reddit.com/r/unixporn/comments/13l4p6p/hyprland_cozy_and_warm_gruvbox/ [Hyprland] Cozy and Warm Gruvbox! : r/unixporn
+https://github.com/0bCdian/Hyprland_dotfiles/tree/Cozy_Gruvbox?tab=readme-ov-file#apps-i-use-point_down 0bCdian/Hyprland_dotfiles at Cozy_Gruvbox
+https://github.com/0bCdian/Hyprland_dotfiles/blob/main/mako/config Hyprland_dotfiles/mako/config at main · 0bCdian/Hyprland_dotfiles
+https://www.reddit.com/r/unixporn/comments/1k26vau/sway_everforest_after_a_long_time/ [Sway] Everforest after a long time : r/unixporn
+https://www.reddit.com/r/unixporn/comments/1jqckc7/hyprland_its_been_a_year_since_ive_switched_and/ [Hyprland] It's been a year since I've switched and this is my functional system. : r/unixporn
+https://www.reddit.com/r/unixporn/comments/100g494/bspwm_everforest/ [bspwm] Everforest : r/unixporn
+https://store.kde.org/browse?cat=123&ord=latest Kvantum - KDE Store
+https://www.lorenzobettini.it/2024/08/better-kde-theming-and-styling-in-hyprland/ Better KDE theming and styling in Hyprland | Lorenzo Bettini
+https://www.reddit.com/r/hyprland/comments/19cspxf/qt_theming_on_hyprland/ QT theming on Hyprland : r/hyprland
+https://store.kde.org/p/1976481 Gruvbox Kvantum Theme - KDE Store
+https://github.com/dexeonify/mpv-config/tree/main dexeonify/mpv-config: My personal mpv config and user scripts. :)
+https://github.com/Zren/mpv-osc-tethys?tab=readme-ov-file Zren/mpv-osc-tethys: An OSC UI replacement for MPV with icons from the bomi video player. Also contains thumbnail preview and a picture-in-picture button.
+https://github.com/noelsimbolon/mpv-config noelsimbolon/mpv-config: 🎥 High-quality configuration for mpv media player
+https://github.com/mingo99/yazi.config/tree/main mingo99/yazi.config
+https://github.com/The-Compiler/dotfiles/tree/master/qutebrowser dotfiles/qutebrowser at master · The-Compiler/dotfiles
+https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/qutebrowser?ref_type=heads .config/qutebrowser · master · Derek Taylor / Dotfiles · GitLab
+https://wallhaven.cc/ Awesome Wallpapers - wallhaven.cc
+https://www.nasa.gov/multimedia/imagegallery/index.html NASA Images | NASA
+https://unsplash.com/ Beautiful Free Images & Pictures | Unsplash
+https://www.reddit.com/r/wallpaperdump/ Wallpaper Dump
+https://www.reddit.com/r/wallpaper/ Wallpaper (Computer Desktops/Backgrounds)
+https://gratisography.com/ Gratisography - Free High-Resolution Stock Photos
+https://wallhere.com/ Free Wallpapers HD Wallpapers - WallHere
+https://www.deviantart.com/ DeviantArt - The Largest Online Art Gallery and Community
+https://www.reddit.com/r/EarthPorn/ EarthPorn: Amazing images of light and landscape
+https://gruvbox-wallpapers.pages.dev/ Gruvbox wallpapers
+https://docs.docker.com/engine/install/ubuntu/ Install Docker Engine on Ubuntu | Docker Docs
+https://docs.docker.com/engine/security/rootless/ Run the Docker daemon as a non-root user (Rootless mode) | Docker Docs
+https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user Linux post-installation steps for Docker Engine | Docker Docs
+https://www.bodybuildingmealplan.com/chris-bumstead-push-pull-legs/ Chris Bumstead Push Pull Legs Routine (Exact 6-Day Split) | Nutritioneering
+https://stackoverflow.com/questions/11746894/what-is-the-proper-rest-response-code-for-a-valid-request-but-empty-data http - What is the proper REST response code for a valid request but empty data? - Stack Overflow
+https://esimdb.com/ eSIMDB: Find and compare best prepaid eSIM for travelers

@@ -1,0 +1,9 @@
+[user]
+	email = kmohamedabdulla@gmail.com
+	name = Abdulla
+[push]
+	default = simple
+[safe]
+	directory = *
+[core]
+	filemode = false

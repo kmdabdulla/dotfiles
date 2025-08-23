@@ -1,0 +1,80 @@
+# Command line completion entries
+set completion-fg '#d7c5a7'
+set completion-bg '#282828'
+
+# Command line completion group elements
+set completion-group-fg '#928374'
+set completion-group-bg '#282828'
+
+# Current command line completion element
+set completion-highlight-fg '#282828'
+set completion-highlight-bg '#83a598'
+
+# Default foreground/background color
+set default-bg "#282828"
+set default-fg "#d7c5a7"
+
+# Input bar
+set inputbar-fg '#d7c5a7'
+set inputbar-bg '#282828'
+
+# Notification
+set notification-fg '#b8bb26'
+set notification-bg '#282828'
+
+# Error notification
+set notification-error-fg '#fb4934'
+set notification-error-bg '#282828'
+
+# Warning notification
+set notification-warning-fg '#fabd2f'
+set notification-warning-bg '#282828'
+
+# Status bar
+set statusbar-fg '#d7c5a7'
+set statusbar-bg '#282828'
+
+# Highlighting parts of the document (e.g. show search results)
+# set highlight-fg '#83a598'
+# set highlight-color '#83a598'
+# set highlight-active-color '#d67b76'
+set highlight-fg "rgba(131, 165, 152, 0.75)"
+set highlight-color "rgba(131, 165, 152, 0.75)"
+set highlight-active-color "rgba(214, 123, 118, 0.75)"
+
+# Represent light/dark colors in recoloring mode
+# set recolor-lightcolor "#000000"
+# set recolor-darkcolor "#ffffff"
+set recolor-lightcolor "rgba(0, 0, 0, 0)"
+set recolor-darkcolor "rgba(255, 255, 255, 1)"
+
+# 'Loading...' text
+set render-loading-bg "#282828"
+set render-loading-fg "#d7c5a7"
+
+# Index mode
+set index-fg '#d7c5a7'
+set index-bg '#282828'
+
+# Selected element in index mode
+set index-active-fg '#282828'
+set index-active-bg '#83a598'
+
+set adjust-open best-fit
+set guioptions none
+set selection-clipboard clipboard
+set font "MartianMono Nerd Font Mono 12"
+set window-title-basename false
+set recolor-keephue false
+set recolor-reverse-video false
+set page-padding 10
+set render-loading true
+set recolor true
+
+# KEY MAPS
+map r reload
+map q quit
+map w adjust_window width
+map i recolor
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"

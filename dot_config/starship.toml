@@ -1,0 +1,129 @@
+add_newline = false
+
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$character"""
+
+palette = 'gruvbox_custom'
+
+[palettes.gruvbox_custom]
+color_fg0 = '#ebdbb2'
+color_bg1 = '#282828'
+color_bg2 = '#504945'
+color_blue = '#82a9a0'
+color_cyan = '#8daf87'
+color_green = '#a3ae6d'
+color_magenta = '#cb8e9e'
+color_red = '#d67b76'
+color_yellow = '#cba364'
+color_white = '#d7c5a7'
+
+[os]
+disabled = false
+style = "bg:color_bg1 fg:color_yellow"
+
+[os.symbols]
+Ubuntu = "󰕈"
+Raspbian = "󰐿"
+Macos = "󰀵"
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Arch = "󰣇"
+Debian = "󰣚"
+Pop = ""
+
+
+[username]
+style_user = 'color_fg0'
+style_root = 'color_fg0'
+format = '[$user]($style) '
+disabled = true
+show_always = false
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐"
+trim_at = ""
+format = '[$ssh_symbol](color_blue) on [$hostname](color_red) '
+style = "fg:color_green"
+disabled = false
+
+[directory]
+disabled = false
+truncation_length = 2
+truncate_to_repo = true
+truncation_symbol = ""
+read_only = ""
+read_only_style = "bg:color_bg1 fg:color_red"
+style = "bg:color_bg1 fg:color_white"
+
+[directory.substitutions]
+"Documents" = "󰧮"
+"Music" = ""
+"Movies" = "󰿏"
+"Pictures" = ""
+"Sources" = ""
+"Downloads" = ""
+#"/" = ""
+#"~" = ""
+
+
+[git_branch]
+disabled = false
+symbol = " "
+style = "fg:color_white"
+truncation_length = 7   # length == ABCDE
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[git_commit]
+disabled = true
+commit_hash_length = 1
+
+[git_state]
+disabled = false
+rebase = "rebasing"
+merge = "merging"
+revert = "reverting"
+cherry_pick = " picking"
+bisect = "bisecting"
+am = "am'ing"
+am_or_rebase = "am/rebase"
+
+[git_status]
+disabled = false
+style= "fg:color_white"
+stashed = " ${count} "
+ahead = "󰞙 ${count} "
+behind = "󰞒 ${count} "
+diverged = "󰵉 ${ahead_count} ${behind_count} "
+conflicted = " ${count} "
+deleted = " ${count} "
+renamed = " ${count} "
+modified = " ${count} "
+staged = " ${count} "
+untracked = "󱅘 ${count}"
+
+[character]
+disabled = false
+success_symbol = "[](color_yellow)"
+error_symbol = "[](color_red)"
+vimcmd_symbol = "[](color_green)"
+vimcmd_replace_one_symbol = "[](bold fg:color_blue)"
+vimcmd_replace_symbol = "[](bold fg:color_cyan)"
+vimcmd_visual_symbol = "[](bold fg:color_magenta)"
+
+[cmd_duration]
+disabled = true
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true

@@ -1,0 +1,8 @@
+alias vim='nvim'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+alias ls='lsd'
+alias lh='lsd -ld .*'
+alias cat='bat'
+alias pbcopy='wl-copy'
+alias pbpaste='wl-paste'
+alias config='chezmoi'

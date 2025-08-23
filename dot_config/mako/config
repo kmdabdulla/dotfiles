@@ -1,0 +1,33 @@
+font=MartianMono Nerd Font Mono 12
+format=<b>%a ⏵</b> %s\n%b
+sort=-time
+layer=overlay
+anchor=top-right
+background-color=#282828
+text-color=#d7c5a7
+width=300
+height=110
+margin=5
+padding=0,5,10
+border-size=2
+border-color=#82a9a0
+progress-color=over #262626
+border-radius=15
+icons=1
+icon-location=left
+# icon-path=/usr/share/icons/hi
+max-icon-size=64
+default-timeout=3000
+ignore-timeout=1
+
+[urgency=normal]
+border-color=#cba364
+
+[urgency=critical]
+border-color=#d67b76
+default-timeout=0
+
+[mode=do-not-disturb]
+invisible=1
+
+# vim: ft=toml

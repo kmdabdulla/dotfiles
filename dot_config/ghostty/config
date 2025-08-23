@@ -1,0 +1,30 @@
+theme = gruvbox-custom
+font-family = "MartianMono Nerd Font Mono"
+font-size = 14
+
+cursor-style = block
+cursor-style-blink = false
+cursor-opacity = 1
+
+background-opacity = 0.95
+background-blur = false
+bold-is-bright = true
+link-url = true
+
+copy-on-select = false
+clipboard-trim-trailing-spaces = true
+mouse-hide-while-typing = true
+confirm-close-surface = false
+
+shell-integration-features = no-cursor
+
+# key bindings
+keybind = super+shift+r=reload_config
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = super+shift+l=copy_url_to_clipboard
+keybind = super+shift+t=scroll_to_top
+keybind = super+shift+b=scroll_to_bottom
+keybind = super+shift+u=scroll_page_up
+keybind = super+shift+d=scroll_page_down
+# vim: ft=toml
