@@ -111,9 +111,9 @@ vim.keymap.set("n", "<leader>nt", '<cmd>lua require("neotest").jump.next({status
 
 -- telescope keymaps
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-vim.keymap.set("n", "<Space><Space>", builtin.oldfiles, {})
-vim.keymap.set("n", "<Space>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<Space>g", builtin.grep_string, {})
+vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>g", builtin.grep_string, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Help Tags" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find Symbols" })
@@ -251,7 +251,8 @@ vim.keymap.set("n", "<F5>", dap.step_back)
 vim.keymap.set("n", "<F12>", dap.restart)
 
 --LSPSaga Keymaps
-vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
-vim.keymap.set("n", "dh", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
+vim.keymap.set("n", "gd", "<cmd>Lspsaga finder<CR>", { silent = true })
+vim.keymap.set("n", "pd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+vim.keymap.set("n", "hd", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sr", "<cmd>Lspsaga rename<CR>", { silent = true })

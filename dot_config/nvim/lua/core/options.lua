@@ -114,3 +114,6 @@ vim.opt.guicursor = {
 	"a:blinkon0-", -- All modes: blinking settings
 	"sm:block-blinkon0-", -- Showmatch: block cursor with specific blinking settings
 }
+
+-- Ignore deprecated warnings
+vim.deprecate = function() end

@@ -38,7 +38,7 @@ require("nvim-treesitter.configs").setup({
 		keymaps = {
 			init_selection = "<C-space>",
 			node_incremental = "<C-space>",
-			scope_incremental = "<C-CR>",
+			scope_incremental = "<C-space>",
 			node_decremental = "<bs>",
 		},
 	},
@@ -79,10 +79,10 @@ require("nvim-treesitter.configs").setup({
 		swap = {
 			enable = true,
 			swap_next = {
-				["<leader>p"] = "@parameter.inner",
+				["<leader>pn"] = "@parameter.inner",
 			},
 			swap_previous = {
-				["<leader>ps"] = "@parameter.inner",
+				["<leader>pp"] = "@parameter.inner",
 			},
 		},
 	},
