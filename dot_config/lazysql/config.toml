@@ -1,0 +1,19 @@
+ConfigFile = '/home/abdulla/.config/lazysql/config.toml'
+
+[application]
+DefaultPageSize = 300
+DisableSidebar = false
+SidebarOverlay = false
+MaxQueryHistoryPerConnection = 100
+
+[[database]]
+Name = 'scheduler'
+URL = 'mysql://sail:sail@localhost:3306/scheduler'
+Provider = 'mysql'
+Username = ''
+Password = ''
+Hostname = ''
+Port = ''
+DBName = 'scheduler'
+URLParams = ''
+Commands = []
