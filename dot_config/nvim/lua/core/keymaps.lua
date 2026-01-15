@@ -30,6 +30,11 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+-- And in terminal mode
+vim.api.nvim_set_keymap("t", "<C-h>", "<C-\\><C-n><C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<C-j>", "<C-\\><C-n><C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
 
 -- Move to beginning and end of the line
 vim.keymap.set({ "n", "x" }, "<c-a>", "_")
@@ -256,3 +261,31 @@ vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 vim.keymap.set("n", "hd", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sr", "<cmd>Lspsaga rename<CR>", { silent = true })
+
+-- opencode keymaps
+vim.keymap.set({ "n", "x" }, "<C-o>a", function()
+	require("opencode").ask("@this: ", { submit = true })
+end, { desc = "Ask opencode" })
+vim.keymap.set({ "n", "x" }, "<C-o>b", function()
+	require("opencode").ask("@buffer: ", { submit = true })
+end, { desc = "Ask opencode" })
+vim.keymap.set({ "n", "x" }, "<C-o>v", function()
+	require("opencode").ask("@visible: ", { submit = true })
+end, { desc = "Ask opencode" })
+vim.keymap.set({ "n", "x" }, "<C-o>:", function()
+	require("opencode").select()
+end, { desc = "Execute opencode action…" })
+
+vim.keymap.set({ "n", "x" }, "<C-o>r", function()
+	return require("opencode").operator("@this ")
+end, { expr = true, desc = "Add range to opencode" })
+vim.keymap.set("n", "<C-o>l", function()
+	return require("opencode").operator("@this ") .. "_"
+end, { expr = true, desc = "Add line to opencode" })
+
+vim.keymap.set("n", "<S-C-u>", function()
+	require("opencode").command("session.half.page.up")
+end, { desc = "opencode half page up" })
+vim.keymap.set("n", "<S-C-d>", function()
+	require("opencode").command("session.half.page.down")
+end, { desc = "opencode half page down" })
