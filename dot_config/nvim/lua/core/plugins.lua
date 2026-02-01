@@ -184,10 +184,11 @@ local plugins = {
 	-- splitting/joining blocks of code
 	{
 		"Wansmer/treesj",
-		keys = { "<space>m", "<space>j", "<space>s" },
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
-			require("treesj").setup({ --[[ your config ]]
+			require("treesj").setup({
+				use_default_keymaps = false,
+				check_syntax_error = true,
 			})
 		end,
 	},
@@ -383,7 +384,7 @@ local plugins = {
 				desc = "Flash Treesitter",
 			},
 			{
-				"fr",
+				"r",
 				mode = "o",
 				function()
 					require("flash").remote()

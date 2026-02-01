@@ -97,9 +97,9 @@ vim.keymap.set("n", "<leader>cf", '<cmd>let @+ = expand("%")<CR>', { desc = "Cop
 vim.keymap.set("n", "<leader>cp", '<cmd>let @+ = expand("%:p")<CR>', { desc = "Copy File Path" })
 
 -- Terminal keymap
-vim.keymap.set("n", "<Space><CR>", ":ToggleTerm<CR>")
-vim.keymap.set("n", "<Space>lt", ":ToggleTermSendCurrentLine<CR>")
-vim.keymap.set("v", "<Space>t", ":ToggleTermSendVisualSelection<CR>")
+vim.keymap.set("n", "<leader><CR>", ":ToggleTerm<CR>")
+vim.keymap.set("n", "<leader>lt", ":ToggleTermSendCurrentLine<CR>")
+vim.keymap.set("v", "<leader>t", ":ToggleTermSendVisualSelection<CR>")
 
 -- Ufo keymaps
 vim.keymap.set("n", "zR", require("ufo").openAllFolds)
@@ -117,16 +117,20 @@ vim.keymap.set("n", "<leader>nt", '<cmd>lua require("neotest").jump.next({status
 -- telescope keymaps
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>g", builtin.grep_string, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
+vim.keymap.set("n", "<C-f>", builtin.live_grep, {})
+vim.keymap.set("n", "<C-g>", builtin.grep_string, {})
+vim.keymap.set("n", "<C-m>", builtin.marks, {})
+vim.keymap.set("n", "<leader>j", builtin.jumplist, {})
+vim.keymap.set("n", "<leader>ll", builtin.loclist, {})
+vim.keymap.set("n", "<leader>qf", builtin.quickfix, {})
+vim.keymap.set("n", "<C-b>", builtin.buffers, { desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Help Tags" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find Symbols" })
 
 -- Telescope file_browser keymap
 vim.api.nvim_set_keymap(
 	"n",
-	"<space>e",
+	"<leader>e",
 	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
 	{ noremap = true }
 )
@@ -149,15 +153,18 @@ vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<C
 vim.keymap.set("n", "sp", '<cmd>lua require("spectre").toggle()<CR>', {
 	desc = "Toggle Spectre",
 })
-vim.keymap.set("n", "<leader>sw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+vim.keymap.set("n", "<leader>s", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
 	desc = "Search current word",
 })
-vim.keymap.set("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+vim.keymap.set("v", "<leader>s", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
 	desc = "Search current word",
 })
 vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
 	desc = "Search on current file",
 })
+
+-- Split/Join blocks of code
+vim.keymap.set("n", "<leader>m", require("treesj").toggle)
 
 -- Replace word under cursor across the file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -200,34 +207,34 @@ local function toggle_telescope(harpoon_files)
 		:find()
 end
 
-vim.keymap.set("n", "<space>l", function()
+vim.keymap.set("n", "<leader>hl", function()
 	toggle_telescope(harpoon:list())
 end, { desc = "Open harpoon window" })
-vim.keymap.set("n", "<space>1", function()
+vim.keymap.set("n", "<leader>1", function()
 	harpoon:list():select(1)
 end)
-vim.keymap.set("n", "<space>2", function()
+vim.keymap.set("n", "<leader>2", function()
 	harpoon:list():select(2)
 end)
-vim.keymap.set("n", "<space>3", function()
+vim.keymap.set("n", "<leader>3", function()
 	harpoon:list():select(3)
 end)
-vim.keymap.set("n", "<space>4", function()
+vim.keymap.set("n", "<leader>4", function()
 	harpoon:list():select(4)
 end)
-vim.keymap.set("n", "<space>j", function()
+vim.keymap.set("n", "<leader>hj", function()
 	harpoon:list():prev()
 end)
-vim.keymap.set("n", "<space>k", function()
+vim.keymap.set("n", "<leader>hk", function()
 	harpoon:list():next()
 end)
-vim.keymap.set("n", "<space>a", function()
+vim.keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
 end)
-vim.keymap.set("n", "<space>r", function()
+vim.keymap.set("n", "<leader>hr", function()
 	harpoon:list():remove()
 end)
-vim.keymap.set("n", "<space>c", function()
+vim.keymap.set("n", "<leader>hc", function()
 	harpoon:list():clear()
 end)
 
@@ -241,10 +248,10 @@ vim.keymap.set("n", "<leader>nt", function()
 end)
 
 -- dap keymaps
-vim.keymap.set("n", "<space>b", dap.toggle_breakpoint)
-vim.keymap.set("n", "<space>td", ":DapTerminate<CR>")
-vim.keymap.set("n", "<space>gb", dap.run_to_cursor)
-vim.keymap.set("n", "<space>?", function()
+vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
+vim.keymap.set("n", "<leader>td", ":DapTerminate<CR>")
+vim.keymap.set("n", "<leader>gb", dap.run_to_cursor)
+vim.keymap.set("n", "<leader>?", function()
 	dapui.eval(nil, { enter = true })
 end)
 vim.keymap.set("n", "<leader>ui", dapui.toggle)
@@ -256,9 +263,9 @@ vim.keymap.set("n", "<F5>", dap.step_back)
 vim.keymap.set("n", "<F12>", dap.restart)
 
 --LSPSaga Keymaps
-vim.keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", { silent = true })
-vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
-vim.keymap.set("n", "hd", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
+vim.keymap.set("n", "sr", "<cmd>Lspsaga finder<CR>", { silent = true })
+vim.keymap.set("n", "sd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+vim.keymap.set("n", "pd", "<Cmd>Lspsaga hover_doc<cr>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("n", "<leader>sr", "<cmd>Lspsaga rename<CR>", { silent = true })
 

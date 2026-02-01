@@ -9,8 +9,8 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
-		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+		["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+		["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()

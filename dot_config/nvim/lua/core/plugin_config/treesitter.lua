@@ -36,10 +36,10 @@ require("nvim-treesitter.configs").setup({
 	incremental_selection = {
 		enable = true,
 		keymaps = {
-			init_selection = "<C-space>",
-			node_incremental = "<C-space>",
-			scope_incremental = "<C-space>",
-			node_decremental = "<bs>",
+			init_selection = "<A-s>",
+			node_incremental = "<A-i>",
+			scope_incremental = "<A-S>",
+			node_decremental = "<A-d>",
 		},
 	},
 	textobjects = {
@@ -48,41 +48,47 @@ require("nvim-treesitter.configs").setup({
 			lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
 			keymaps = {
 				-- You can use the capture groups defined in textobjects.scm
-				["aa"] = "@parameter.outer",
-				["ia"] = "@parameter.inner",
+				["ap"] = "@parameter.outer",
+				["ip"] = "@parameter.inner",
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
-				["ac"] = "@class.outer",
-				["ic"] = "@class.inner",
+				["ac"] = "@conditional.outer",
+				["ic"] = "@conditional.inner",
+				["al"] = "@loop.outer",
+				["il"] = "@loop.inner",
 			},
 		},
 		move = {
 			enable = true,
 			set_jumps = true, -- whether to set jumps in the jumplist
 			goto_next_start = {
-				["]m"] = "@function.outer",
-				["]]"] = "@class.outer",
+				["]m"] = "@function.inner",
+				["]c"] = "@conditional.inner",
+				["]l"] = "@loop.inner",
 			},
 			goto_next_end = {
-				["]M"] = "@function.outer",
-				["]["] = "@class.outer",
+				["]M"] = "@function.inner",
+				["]C"] = "@conditional.inner",
+				["]L"] = "@loop.inner",
 			},
 			goto_previous_start = {
-				["[m"] = "@function.outer",
-				["[["] = "@class.outer",
+				["[m"] = "@function.inner",
+				["[c"] = "@conditional.inner",
+				["[l"] = "@loop.inner",
 			},
 			goto_previous_end = {
-				["[M"] = "@function.outer",
-				["[]"] = "@class.outer",
+				["[M"] = "@function.inner",
+				["[C"] = "@conditional.inner",
+				["[L"] = "@loop.inner",
 			},
 		},
 		swap = {
 			enable = true,
 			swap_next = {
-				["<leader>pn"] = "@parameter.inner",
+				["<leader>z"] = "@parameter.inner",
 			},
 			swap_previous = {
-				["<leader>pp"] = "@parameter.inner",
+				["<leader>Z"] = "@parameter.inner",
 			},
 		},
 	},
