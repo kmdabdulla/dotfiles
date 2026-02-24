@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 # Created by `pipx` on 2025-07-01 05:03:10
 export PATH="$PATH:/home/abdulla/.local/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export EDITOR=nvim
 export VISUAL=nvim
 
