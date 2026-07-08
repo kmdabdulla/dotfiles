@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-starship init fish | source
-
 source ~/.bash_aliases
 
 zoxide init --cmd cd fish | source
@@ -20,3 +18,5 @@ set fish_cursor_insert block
 # Set the replace mode cursors to an underscore
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
+
+starship init fish | source
