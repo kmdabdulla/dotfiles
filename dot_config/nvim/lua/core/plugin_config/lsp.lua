@@ -63,7 +63,6 @@ require("mason-tool-installer").setup({
 		"gofumpt",
 		"prettierd",
 		"phpcbf",
-		"rustfmt",
 		"mdformat",
 		"shfmt",
 		"jq",
