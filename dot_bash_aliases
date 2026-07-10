@@ -7,3 +7,4 @@ alias pbcopy='wl-copy'
 alias pbpaste='wl-paste'
 alias config='chezmoi'
 alias z='zathura'
+alias ccd="cd \$(chezmoi source-path)"
