@@ -1,6 +1,6 @@
 theme = gruvbox-custom
 font-family = "MartianMono Nerd Font Mono"
-font-size = 14
+font-size = 13
 
 cursor-style = block
 cursor-style-blink = false

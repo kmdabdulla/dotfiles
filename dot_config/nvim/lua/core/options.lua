@@ -115,5 +115,19 @@ vim.opt.guicursor = {
 	"sm:block-blinkon0-", -- Showmatch: block cursor with specific blinking settings
 }
 
--- Ignore deprecated warnings
-vim.deprecate = function() end
+-- Silences visual deprecation popups but keeps logging functional
+vim.g.deprecation_warnings = false
+
+-- Disable legacy remote plugin providers
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+
+-- Register unknown filetypes to clear LSP config warnings
+vim.filetype.add({
+	extension = {
+		gotmpl = "gotmpl", -- Map .gotmpl files to the 'gotmpl' filetype
+		mdx = "markdown.mdx", -- Map .mdx files to the 'markdown.mdx' filetype
+	},
+})

@@ -16,6 +16,22 @@ require("conform").setup({
 		-- have other formatters configured.
 		-- ["_"] = { "trim_whitespace" },
 	},
+
+	-- Override phpcbf to prefer the project-local binary and run from
+	-- the project root so it picks up phpcs.xml automatically.
+	formatters = {
+		phpcbf = {
+			command = function()
+				local local_bin = vim.fn.getcwd() .. "/vendor/bin/phpcbf"
+				if vim.fn.executable(local_bin) == 1 then
+					return local_bin
+				end
+				return "phpcbf"
+			end,
+			cwd = require("conform.util").root_file({ "phpcs.xml", "phpcs.xml.dist", ".phpcs.xml", "composer.json" }),
+		},
+	},
+
 	-- If this is set, Conform will run the formatter on save.
 	-- It will pass the table to conform.format().
 	-- This can also be a function that returns the table.

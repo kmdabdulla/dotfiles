@@ -39,6 +39,7 @@ local plugins = {
 	{
 		"willothy/moveline.nvim",
 		build = "make",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 
 	-- marks
@@ -140,8 +141,64 @@ local plugins = {
 	},
 
 	-- Syntax highlighting
-	"nvim-treesitter/nvim-treesitter-textobjects",
-	"nvim-treesitter/nvim-treesitter",
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("nvim-treesitter-textobjects").setup({
+				select = {
+					enable = true,
+					lookahead = true,
+					keymaps = {
+						["ap"] = "@parameter.outer",
+						["ip"] = "@parameter.inner",
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+						["ac"] = "@conditional.outer",
+						["ic"] = "@conditional.inner",
+						["al"] = "@loop.outer",
+						["il"] = "@loop.inner",
+					},
+				},
+				move = {
+					enable = true,
+					set_jumps = true,
+					goto_next_start = {
+						["]m"] = "@function.inner",
+						["]c"] = "@conditional.inner",
+						["]l"] = "@loop.inner",
+					},
+					goto_next_end = {
+						["]M"] = "@function.inner",
+						["]C"] = "@conditional.inner",
+						["]L"] = "@loop.inner",
+					},
+					goto_previous_start = {
+						["[m"] = "@function.inner",
+						["[c"] = "@conditional.inner",
+						["[l"] = "@loop.inner",
+					},
+					goto_previous_end = {
+						["[M"] = "@function.inner",
+						["[C"] = "@conditional.inner",
+						["[L"] = "@loop.inner",
+					},
+				},
+				swap = {
+					enable = true,
+					swap_next = { ["<leader>z"] = "@parameter.inner" },
+					swap_previous = { ["<leader>Z"] = "@parameter.inner" },
+				},
+			})
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("core.plugin_config.treesitter")
+		end,
+	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
@@ -176,7 +233,11 @@ local plugins = {
 		event = "InsertEnter",
 		opts = {},
 	},
-	"windwp/nvim-ts-autotag",
+	{
+		"windwp/nvim-ts-autotag",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		opts = {},
+	},
 
 	-- Multi line edit
 	"mg979/vim-visual-multi",
@@ -253,15 +314,38 @@ local plugins = {
 	{
 		"NickvanDyke/opencode.nvim",
 		dependencies = {
-			-- Recommended for `ask()` and `select()`.
-			-- Required for `snacks` provider.
-			---@module 'snacks' <- Loads `snacks.nvim` types for configuration intellisense.
-			{ "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
+			---@module 'snacks'
+			{
+				"folke/snacks.nvim",
+				priority = 1000,
+				lazy = false,
+				opts = {
+					image = { enabled = true },
+					picker = { enabled = true },
+					input = { enabled = true },
+					terminal = { enabled = false },
+					bigfile = { enabled = false },
+					dashboard = { enabled = false },
+					explorer = { enabled = false },
+					notifier = { enabled = false },
+					quickfile = { enabled = false },
+					scope = { enabled = false },
+					scroll = { enabled = false },
+					statuscolumn = { enabled = false },
+					toggle = { enabled = false },
+					words = { enabled = false },
+					lazygit = { enabled = false },
+				},
+			},
 		},
 	},
 
 	-- Snippet generator
-	"L3MON4D3/LuaSnip",
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
+		build = "make install_jsregexp",
+	},
 	"rafamadriz/friendly-snippets",
 
 	-- LSP
@@ -287,7 +371,6 @@ local plugins = {
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			"L3MON4D3/LuaSnip",
 		},
 	},
 
@@ -430,6 +513,9 @@ local opts = {
 		border = "rounded",
 		title = "Plugin Manager",
 		title_pos = "center",
+	},
+	rocks = {
+		enabled = false,
 	},
 }
 

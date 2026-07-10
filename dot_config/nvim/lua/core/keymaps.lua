@@ -296,3 +296,11 @@ end, { desc = "opencode half page up" })
 vim.keymap.set("n", "<S-C-d>", function()
 	require("opencode").command("session.half.page.down")
 end, { desc = "opencode half page down" })
+
+--illuminate keymaps
+vim.keymap.set("n", "]]", function()
+	require("illuminate").goto_next_reference(false)
+end, { desc = "Next word reference" })
+vim.keymap.set("n", "[[", function()
+	require("illuminate").goto_prev_reference(false)
+end, { desc = "Prev word reference" })
