@@ -7,8 +7,8 @@ Type=oneshot
 RemainAfterExit=yes
 Environment=DISPLAY=:0
 
-ExecStart=/usr/bin/tmux new-session -d -s default
-
+# Check if 'default' exists; if not, create it. 'has-session' returns 0 if it exists.
+ExecStart=/bin/sh -c "/usr/bin/tmux start-server; /usr/bin/tmux has-session -t default 2>/dev/null || /usr/bin/tmux new-session -d -s default; exit 0"
 ExecStop=/home/abdulla/.config/tmux/plugins/tmux-resurrect/scripts/save.sh
 ExecStop=/usr/bin/tmux kill-server
 
