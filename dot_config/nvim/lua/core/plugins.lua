@@ -377,7 +377,7 @@ local plugins = {
 	-- Fuzzy finder
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
+		branch = "master",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 	-- Telescope file browser
