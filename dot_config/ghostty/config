@@ -20,8 +20,10 @@ shell-integration-features = no-cursor
 
 # key bindings
 keybind = super+shift+r=reload_config
-keybind = super+c=copy_to_clipboard
-keybind = super+v=paste_from_clipboard
+# super + c maps to ctrl+insert in hyprland config
+keybind = ctrl+insert=copy_to_clipboard
+# super + v maps to shift+insert in hyprland config
+keybind = shift+insert=paste_from_clipboard
 keybind = super+shift+l=copy_url_to_clipboard
 keybind = super+shift+t=scroll_to_top
 keybind = super+shift+b=scroll_to_bottom
