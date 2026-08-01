@@ -29,4 +29,5 @@ keybind = super+shift+t=scroll_to_top
 keybind = super+shift+b=scroll_to_bottom
 keybind = super+shift+u=scroll_page_up
 keybind = super+shift+d=scroll_page_down
+keybind = shift+enter=text:\x1b\r
 # vim: ft=toml
