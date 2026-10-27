@@ -67,6 +67,7 @@ require("mason-tool-installer").setup({
 		"shfmt",
 		"jq",
 		"php-debug-adapter",
+		"tree-sitter-cli",
 	},
 
 	-- if set to true this will check each tool for updates. If updates
